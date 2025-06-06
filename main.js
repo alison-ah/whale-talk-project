@@ -6,19 +6,17 @@ var resultArray = [];
 
 for (let i = 0; i < input.length; i++) {
   // console.log(i);
+  const letter = input[i].toLocaleLowerCase();
+
+  if (letter === 'e' || letter === 'u') {
+    resultArray.push(letter);
+  }
+
   for (let j = 0; j < vowels.length; j++) {
-    // console.log(j);
-    if (input[i] === vowels[j]) {
-      // console.log(input[i]);
-    }
-    if (input[i] === vowels[j]) {
-      resultArray.push(input[i]);
-    }
-    if (input[i] === 'e') {
-      resultArray.push('e');
-    }
-    if (input[i] === 'u') {
-      resultArray.push('u');
+    const vowel = vowels[j];
+
+    if (letter === vowel) {
+      resultArray.push(letter);
     }
   }
 }
